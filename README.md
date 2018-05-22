@@ -1,30 +1,25 @@
-SparkFun Qwiic 4m Distance Sensor with VL53L1X
+SparkFun RGB Panel Shield
 ========================================
 
-![SparkFun Distance Sensor 4m Qwiic - VL53L1X](https://cdn.sparkfun.com//assets/parts/1/2/8/6/3/14667-ToF_Laser_Distance_Sensor__Qwiic__-_VL53L1X-01.jpg)
+![SparkFun RGB Panel Shield](https://cdn.sparkfun.com//assets/parts/1/2/9/4/4/SparkFun_RGB_Shield_1.jpg)
 
-[*SparkX Distance Sensor 4m (Qwiic) - VL53L1X (SPX-14667)*](https://www.sparkfun.com/products/14667)
+[*SparkX RGB Panel Shield (SPX-14721)*](https://www.sparkfun.com/products/14721)
 
-The VL53L1X is the latest Time Of Flight (ToF) sensor to be released. It uses a VCSEL (vertical cavity surface emitting laser) to emit a class 1 IR laser and time the reflection to the target. What does all this mean? You can measure the distance to an object up to 4 meters away with millimeter resolution! That’s pretty incredible.
+RGB panels are excellent fun but wiring them up can be a pain. This simple shield for Arduino connects the necessary 14 digital pins to drive our [32x32 RGB panel](https://www.sparkfun.com/products/14646). This comes as a bag of parts but once you've soldered the handful of components it's as easy as plugging on the 2x8 connector from the RGB panel to the shield and you're off to the races.
 
-We’re far from done: The VL53L1X is a highly complex sensor with a multitude of options and configurations. We’ve written example sketches that allow you to read the distance, signal rate, and range status. Because ST has chosen not to release a complete datasheet we are forced to reverse engineer the interface from their example code and I2C data stream captures. If you’re into puzzles we could use your help to make the library better!
+This shield is guaranteed to work with our [32x32 RGB panel](https://www.sparkfun.com/products/14646) but has been designed to work with nearly all 32x32 pixel panels available on the market. 
 
-We’ve found the precision of the sensor to be 1mm but the accuracy is around +/-5mm.
+**Note:** This shield routes the CLK signal to pin 11. This makes the shield compatible with both Uno and Mega but you will need to change the define at the top of your sketch to:
 
-SparkFun labored with love to create this code. Feel like supporting open source hardware? 
-Buy a [breakout board](https://www.sparkfun.com/products/14667) from SparkFun!
+    #define CLK 11
+
+SparkFun labored with love to create this product. Feel like supporting open source hardware? 
+Buy a [board](https://www.sparkfun.com/products/14721) from SparkFun!
 
 Repository Contents
 -------------------
 
-* **/Documents** - Datasheets
-* **/DataCapture** - A capture of the I2C traffic from the ST X-NUCLEO-53L1A1 evaluation kit.
 * **/Hardware** - Eagle design files (.brd, .sch)
-* **/Software** - Processing Example showing how to manipulate graphics using quaternions
-
-Library
---------------
-* **[Arduino Library](https://github.com/sparkfun/SparkFun_VL53L1X_Arduino_Library)** - Library for reading distance in millimeters, signal rate, status, etc.
 
 License Information
 -------------------
